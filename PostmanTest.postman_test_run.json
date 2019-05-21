@@ -1,0 +1,229 @@
+{
+	"id": "9abcae23-caf8-4af7-b279-f7e4c4ffe62c",
+	"name": "PostmanTest",
+	"allTests": [],
+	"timestamp": "2019-05-21T18:44:00.569Z",
+	"collection_id": "a52bc91c-0774-4ab4-980d-aa13d47a4454",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "a52bc91c-0774-4ab4-980d-aa13d47a4454",
+		"name": "PostmanTest",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"ff60c329-991a-4190-800d-eb8bfb5a8988",
+			"03d7bafc-ec67-48e7-9d29-24cbfcc75ef9",
+			"31d11f7f-b4b8-4e98-9cd3-5f03e026c0b7",
+			"35778dcf-f939-47e5-a55d-1359735cc037"
+		],
+		"folders_order": [],
+		"owner": "7484737",
+		"favorite": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "boardId",
+			"value": "5ce4389dbc27e3491514e737",
+			"enabled": true
+		},
+		{
+			"key": "listId",
+			"value": "5cd870472bb1a575cd13328b",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "Get Boards",
+			"id": "ff60c329-991a-4190-800d-eb8bfb5a8988",
+			"url": "https://api.trello.com/1/members/me/boards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"1135"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "1135",
+			"totalRequestTime": "1135",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add Board",
+			"id": "03d7bafc-ec67-48e7-9d29-24cbfcc75ef9",
+			"url": "https://api.trello.com/1/boards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&name=MyPostmanBoard",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"177"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "177",
+			"totalRequestTime": "177",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add List",
+			"id": "31d11f7f-b4b8-4e98-9cd3-5f03e026c0b7",
+			"url": "https://api.trello.com/1/lists?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&idBoard=5ce446ef0485c28461d16b84&name=My Postman List",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"183"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "183",
+			"totalRequestTime": "183",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add Card",
+			"id": "35778dcf-f939-47e5-a55d-1359735cc037",
+			"url": "https://api.trello.com/1/cards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&idList=5ce446efd446530ffcc8340e&name=My Postman Card",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"381"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "381",
+			"totalRequestTime": "381",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 1,
+	"totalFail": 0,
+	"totalTime": 1876,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Get Boards",
+			"id": "ff60c329-991a-4190-800d-eb8bfb5a8988",
+			"url": "https://api.trello.com/1/members/me/boards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959",
+			"time": "2019-05-21T18:44:00.569Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add Board",
+			"id": "03d7bafc-ec67-48e7-9d29-24cbfcc75ef9",
+			"url": "https://api.trello.com/1/boards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&name=MyPostmanBoard",
+			"time": "2019-05-21T18:44:00.569Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Add List",
+			"id": "31d11f7f-b4b8-4e98-9cd3-5f03e026c0b7",
+			"url": "https://api.trello.com/1/lists?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&idBoard=5ce446ef0485c28461d16b84&name=My Postman List",
+			"time": "2019-05-21T18:44:00.569Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Add Card",
+			"id": "35778dcf-f939-47e5-a55d-1359735cc037",
+			"url": "https://api.trello.com/1/cards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&idList=5ce446efd446530ffcc8340e&name=My Postman Card",
+			"time": "2019-05-21T18:44:00.569Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}

@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "a52bc91c-0774-4ab4-980d-aa13d47a4454",
+		"name": "PostmanTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Boards",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b515a3fd-41f4-407e-9145-a27109813e6c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/members/me/boards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "095750e20d74c0b98c2f59ed8c3c188e"
+						},
+						{
+							"key": "token",
+							"value": "239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7158309-fb7e-4eba-9e60-b2066f2955d4",
+						"exec": [
+							"let responseData = pm.response.json();",
+							"",
+							"pm.globals.set(\"boardId\", responseData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&name=MyPostmanBoard",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "095750e20d74c0b98c2f59ed8c3c188e"
+						},
+						{
+							"key": "token",
+							"value": "239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959"
+						},
+						{
+							"key": "name",
+							"value": "MyPostmanBoard"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "96046854-6887-496b-81c3-c9ea36ab3cc7",
+						"exec": [
+							"let responseData = pm.response.json();",
+							"",
+							"pm.globals.set(\"listId\", responseData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/lists?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&idBoard={{boardId}}&name=My Postman List",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "095750e20d74c0b98c2f59ed8c3c188e"
+						},
+						{
+							"key": "token",
+							"value": "239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{boardId}}"
+						},
+						{
+							"key": "name",
+							"value": "My Postman List"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/cards?key=095750e20d74c0b98c2f59ed8c3c188e&token=239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959&idList={{listId}}&name=My Postman Card",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "095750e20d74c0b98c2f59ed8c3c188e"
+						},
+						{
+							"key": "token",
+							"value": "239a8a927f019001fd11fe2f71649fa2cff4c1310960f168e012c40ee3238959"
+						},
+						{
+							"key": "idList",
+							"value": "{{listId}}"
+						},
+						{
+							"key": "name",
+							"value": "My Postman Card"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
